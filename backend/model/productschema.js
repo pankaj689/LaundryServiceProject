@@ -6,7 +6,6 @@ const userSchema = new Schema({
     prodDesc:{type : String, required:true},
     prodImg:{type : String,required: true }
     
-    
 }, {strict: false },{timestamps:true});
 
 const prodList= mongoose.model('prodList',userSchema);
