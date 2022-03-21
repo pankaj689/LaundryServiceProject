@@ -1,0 +1,64 @@
+.sidebar{
+    /* Layout Properties */
+    position: relative;
+    top: -1.5px;
+    left: 0px;
+    width: 57px;
+    height: 933px;
+    border: 1px solid black;
+    /* UI Properties */
+    background: #5861AE 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+/* home{
+
+} */
+.home-btn{
+    position: absolute;
+/* Layout Properties */
+top: 119px;
+left: 18px;
+width: 22px;
+height: 22px;
+/* UI Properties */
+background: transparent url('./assests/home-run.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.more{
+    position: relative;
+    top: 169px;
+    left: 0px;
+    width: 57px;
+    height: 47px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.more-btn{
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    width: 22px;
+    height: 22px;
+    /* UI Properties */
+    background: transparent url('./assests//more.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+ 
+/* .list{
+
+} */
+.list-btn{
+    position: absolute;
+    top: 247px;
+    left: 16px;
+    width: 25px;
+    height: 18px;
+    /* UI Properties */
+    background: transparent url('./assests//list.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    }
+
+
+
+
