@@ -7,7 +7,7 @@ const userSchema = new Schema({
     storePhone :{type  :String ,required: true},
     totalitem:{type  :Number ,required: true},
     pickupPrice :{type  : Number ,required: true},
-//    user:{type:Schema.Types.ObjectId, ref:"userdetails"} 
+    user:{type:Schema.Types.ObjectId, ref:"orderHistory"} ,
     useraddress:{type: String, required:true  }
      
 }, {strict: false },{timestamps:true});
