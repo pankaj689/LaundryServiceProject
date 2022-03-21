@@ -1,0 +1,117 @@
+.main{
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 1172px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.Laundry{
+   top: 230px;
+   margin-left:  152px;
+    width: 411px;
+    height: 257px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal 900 100px/120px Avenir;
+    letter-spacing: 0px;
+    color: #5861AE;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.doorstep{
+    top: 501px;
+    margin-left: 151px;
+    width: 335px;
+    height: 27px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 20px/26px Avenir;
+    letter-spacing: 0.8px;
+    color: #565657;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.notaccount{
+    top: 602px;
+    margin-left: 152px;
+    width: 189px;
+    height: 22px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 16px/26px Avenir;
+    letter-spacing: 0.64px;
+    color: #565657;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.laundryreg{
+    top: 640px;
+    margin-left: 152px;
+}
+.right{
+    top: 81px;
+    left: 730px;
+    width: 710px;
+    height: 769px;
+    /* UI Properties */
+    background: #B9C0FD1A 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.sign{
+    top: 263px;
+    left: 860px;
+    width: 128px;
+    height: 44px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal medium 32px/60px Avenir;
+    letter-spacing: 1.28px;
+    color: #4552C1;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.mob{
+    top: 372px;
+    left: 865px;
+    width: 322px;
+    height: 27px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+
+.pass{
+    top: 464px;
+    left: 865px;
+    width: 322px;
+    height: 27px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+
+.forget{
+    top: 521px;
+    left: 1116px;
+    width: 140px;
+    height: 22px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal medium 16px/26px Avenir;
+    letter-spacing: 0.64px;
+    color: #4552C1;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.londrysign{
+    top: 611px;
+    left: 973px;
+}
