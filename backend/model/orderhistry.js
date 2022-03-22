@@ -1,6 +1,5 @@
 const  mongoose =require('mongoose');
 const { Schema } = mongoose;
-
 const orderSchema = new Schema({
     prodType: {type: Array},
     orderId:{type:String, required: true},
@@ -10,8 +9,9 @@ const orderSchema = new Schema({
     storePhone :{type  :String ,required: true},
     totalItem:{type  :Number ,required: true},
     price :{type  : Number ,required: true},
-    status:{type : String , required: true, default:"Ready to Pick"},
-    user:{type:Schema.Types.ObjectId, ref:"userdetails"}    
+    status:{type : String , default:"Ready to Pick"},
+    user:{type:Schema.Types.ObjectId, ref:"userdetails"} ,
+    refsymmery:{type:Schema.Types.ObjectId, ref:"orderHistory"},   
 }, {strict: false },{timestamps:true});
 
 const orderHistory = mongoose.model('orderHistory', orderSchema);

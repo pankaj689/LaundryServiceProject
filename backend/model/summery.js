@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const summerySchema = new Schema({
     prodType: {type: Array}, 
-    prodType: [{type: String}],
+    // prodType: [{type: String}],
     storeLocation:{type : String },
     storeaddress:{type  :String },
     storePhone :{type  :String},
@@ -11,8 +11,9 @@ const summerySchema = new Schema({
     subTotal: {type: Number},
     total: {type: Number},
     pickupcharges :{type  : Number, default: 90},
-    user:{type:Schema.Types.ObjectId, ref:"orderHistory"},
-    address:[{type: String, required:true  }]
+    reforder:{type:Schema.Types.ObjectId, ref:"summary"},
+    user:{ type : String, } ,
+    address:{type: String }                //[{type: String }]
      
 }, {strict: false },{timestamps:true});
 
