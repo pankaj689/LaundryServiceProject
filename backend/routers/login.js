@@ -6,7 +6,7 @@ const userdetails = require("../model/userschema.js");
 const bodyparser = require("body-parser");
 const { body, oneOf, validationResult } = require("express-validator");
 const SECRET = "LaundryService";
-router.use(bodyparser());
+router.use(bodyparser.json());
 router.get("/details", async (req, res) => {
   const user = await userdetails.find();
   return res.json({
@@ -96,8 +96,8 @@ router.post(
         }
         bcrypt.compare(password, user.password).then(function (result) {
           if (result) {
-            var token = jwt.sign({ _id: user._id }, SECRET);
-            res.json({
+            var token = jwt.sign({ exp: Math.floor(Date.now() / 1000) + (120 * 120),data: user._id }, SECRET);      //_id: user._id
+            res.json({ 
               status: "sucess",
               token,
             });
@@ -118,7 +118,7 @@ router.post(
         }
         bcrypt.compare(password, user.password).then(function (result) {
           if (result) {
-            var token = jwt.sign({ data: user._id }, SECRET);
+            var token = jwt.sign({exp: Math.floor(Date.now() / 1000) + (120 * 120), data: user._id }, SECRET);
 
             res.json({
               status: "sucess",

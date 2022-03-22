@@ -3,8 +3,10 @@ const router = express.Router();
 const orderHistory = require('../model/orderhistry');
 const summary = require('../model/summery');
 
-router.get("/orders", async (req, res) => {
-    const orders =  await orderHistory.find({user: req.user}); //user refernce needed for particular person
+router.get("/Createorder", async (req, res) => {
+  
+    console.log("req.user",req.user)
+    const orders =  await orderHistory.find({user: "6239653a93d7a3b1d634ffe2"}); //user refernce needed for particular person
     if (orders){
         res.status(200).json({
             "status": "success",
