@@ -1,17 +1,23 @@
 const  mongoose =require('mongoose');
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
-    storeLocation:{type : String,required: true },
-    storeaddress:{type  :String ,required: true},
-    storePhone :{type  :String ,required: true},
-    totalitem:{type  :Number ,required: true},
-    pickupPrice :{type  : Number ,required: true},
-    user:{type:Schema.Types.ObjectId, ref:"orderHistory"} ,
-    useraddress:{type: String, required:true  }
+const summerySchema = new Schema({
+    prodType: {type: Array}, 
+    // prodType: [{type: String}],
+    storeLocation:{type : String },
+    storeaddress:{type  :String },
+    storePhone :{type  :String},
+    quantity: {type: Number},
+    subTotal: {type: Number},
+    total: {type: Number},
+    pickupcharges :{type  : Number, default: 90},
+    reforder:{type:Schema.Types.ObjectId, ref:"summary"},
+    user:{ type : String, } ,
+    address:{type: String }                //[{type: String }]
      
 }, {strict: false },{timestamps:true});
 
-const summary = mongoose.model('summary',userSchema);
+
+const summary = mongoose.model('summary',summerySchema);
 
 module.exports =summary

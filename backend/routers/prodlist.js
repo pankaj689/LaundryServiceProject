@@ -3,7 +3,7 @@ const router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://group14:group1410x@laundryservice.m0iy6.mongodb.net/LaundryService?retryWrites=true&w=majority";
 var bodyParser = require('body-parser')
-router.use(bodyParser())
+router.use(bodyParser.json())
 router.get("/prodlist", async (req, res) => {
     MongoClient.connect(url, function (err, db) {
         var resultArray = []
