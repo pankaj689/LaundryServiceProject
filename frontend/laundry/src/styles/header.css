@@ -18,6 +18,7 @@ header h4 {
   font-size: 2vw;
 }
 nav {
+  
   position: relative;
   right: 0px;
 }
@@ -30,22 +31,67 @@ h4 {
 }
 ul {
   margin-left: 0px;
+  display: flex;
+  flex-flow: row;
 }
 li {
-  display: inline-block;
+  /* display: inline-block; */
+  
   list-style: none;
   padding: 2em;
   font: normal normal normal 14px/19px Avenir;
   letter-spacing: 1.05px;
 }
 
-nav button {
+nav .userAcc{
   background-color: #5861ae;
   color: white;
-  width: 113px;
-  height: 80px;
+  /* width: 113px;
+  height: 80px; */
   background: #5861ae 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
-  border: none;
+  /* border: none; */
+ 
+}
+.userAcc{
+  
+  width: 214px;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background: #5861AE 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+ opacity: 1;
+}
+
+
+
+.userImage{
+  width: 43px;
+  height: 43px;
+  margin-top: 19px;
+  margin-left: 22px;
+  border-radius: 50%;
+/* UI Properties */
+  background: transparent url('https://image.shutterstock.com/image-photo/pretty-blonde-woman-wearing-glasses-600w-1370334482.jpg') 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  
+}
+.userName{
+  margin-top: 10px;
+  margin-right: 30px;
+  width: 96px;
+  height: 22px;
+  /* UI Properties */
+  text-align: center;
+  font-size: 16px;
+  font: normal normal medium 16px/22px Avenir;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  opacity: 1;
+  
 }

@@ -1,43 +1,27 @@
-// <<<<<<< HEAD
-import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/header.js";
-import Footer from "./components/footer.js";
-import Login from "./components/login.js";
-import AboutUS from "./components/aboutus";
-// =======
-// >>>>>>> 925014e8d72c22a3d4dababc70661653a7e145b0
-
-import "./App.css";
-import OrderHistory from "./components/orderHistory";
 
 // import logo from "./logo.svg";
 import "./App.css";
+import UserAccountPage from "./components/useraccount"
+// import Footer from "./components/footer.js";
+// import Login from "./components/login.js";
+// import AboutUS from "./components/aboutus";
+
+// import OrderHistory from "./components/orderHistory";
+
+// import logo from "./logo.svg";
+
 // import Login from "./components/login";
 
 // import {Ragister,Ragisteruser,SigninReg,Signinhome,Create,Cancel,Process,Reset,Confirm,Go_To_Orders,Cancel_Order} from "./components/button"
-import { Signin } from "./components/signin";
+// import { Signin } from "./components/signin";
 function App() {
   return (
     <div className="App">
-      {/* <<<<<<< HEAD */}
-      <header className="App-header">
-        <Header />
-      </header>
-      =======
-      {/* <Ragister/>
-      <Ragisteruser/>
-      <SigninReg/>
-      <Signinhome/>
-      <Create/>
-      <Cancel/>
-      <Process/>
-      <Reset/>
-      <Confirm/>
-      <Go_To_Orders/>
-      <Cancel_Order/> */}
-      <Signin />
-      {/* >>>>>>> 925014e8d72c22a3d4dababc706616545b03a7e1 */}
+      
+     <UserAccountPage/>
+    
+      
+      
     </div>
   );
 }

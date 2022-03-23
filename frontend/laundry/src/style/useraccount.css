@@ -1,0 +1,61 @@
+.midSection{
+    display: flex;
+    flex-flow: row;
+}
+/* .initialOrder0{
+    position: relative;
+    top:50 px;
+    left:49px;
+} */
+
+.sidediv{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.midlefttop{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+   
+    
+} 
+.initialOrder0{
+    margin-left: 49px;
+    margin-top: 20px;
+}
+.inputclass{
+    margin-right: 49px;
+    margin-top: 30px;
+    width: 200px;
+    height: 21px;
+    /* UI Properties */
+    opacity: 1;
+    background: url(../assests/search.png) no-repeat scroll 6px 7px;
+    padding-left:20px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+
+}
+.no-outline:focus {
+    outline: none;
+}
+.btndiv{
+   
+    color: black;
+}
+.NoOrders{
+   
+    color: black;
+    margin-top: 300px;
+    margin-left:600px ;
+}
+.btnCreat{
+    margin-top: 10px;
+    margin-left:630px ;
+}
