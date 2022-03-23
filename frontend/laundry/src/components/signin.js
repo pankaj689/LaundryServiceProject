@@ -4,7 +4,6 @@ import "../style/stylebtn.css"
 
 import {Ragister,Signinhome} from "./button"
 function Signin (){
-
     return (
         <div  className="main" >
            <h1 className='Laundry'>Laundry Service</h1>
@@ -16,7 +15,7 @@ function Signin (){
                <h2 className='sign'>SIGN IN</h2>
                <input name="Mobile/email" value="" placeholder="Mobile/Email" className='mob' />
                <input name="password" value="" placeholder="Password" className='pass' />
-               <a href='#' className='forget'>Forget Password?</a>
+               <a href='/' className='forget'>Forget Password?</a>
                <div className='londrysign'><Signinhome/></div>
             </div>
         </div>
