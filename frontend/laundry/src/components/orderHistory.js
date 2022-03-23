@@ -1,5 +1,6 @@
 import Sidebar from "./sidebar";
-import '../orderHistory.css';
+import Header from "./header";
+import '../styles/orderHistory.css';
 import search from '../assests/search.svg'
 
 const OrderHistory = () => {
@@ -7,7 +8,7 @@ const OrderHistory = () => {
     const count = 0;
     return (
         <div>
-            {/* <Header/>  is to be created*/}  
+            <Header />
             <Sidebar />
             <div className ="table-head">
                 <p className ="order-count">Orders | {count}</p>

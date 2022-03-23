@@ -59,7 +59,7 @@
     width: 14px;
     height: 14px;
     /* UI Properties */
-    background: transparent url('./assests/search.png')  0% 0% no-repeat padding-box;
+    background: transparent url('../assests/search.png')  0% 0% no-repeat padding-box;
     opacity: 1;
   }
 
