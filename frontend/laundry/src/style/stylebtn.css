@@ -33,7 +33,7 @@
     border: 1px solid #5861AE;
     border-radius: 4px;
     opacity: 1;
-  
+    padding-bottom: 45px;
     text-align: center;
     font: normal normal 600 14px/48px Open Sans;
     letter-spacing: 0px;
@@ -51,6 +51,7 @@
     font: normal normal 600 14px/48px Open Sans;
     letter-spacing: 0px;
     color: #5861AE; 
+    padding-bottom: 45px;
 }
 .processbtn{
     width: 107px;
@@ -65,6 +66,7 @@
     font: normal normal 600 14px/48px Open Sans;
     letter-spacing: 0px;
     color: #FFFFFF;
+    padding-bottom: 45px;
 }
 
 .Resetbtn{
