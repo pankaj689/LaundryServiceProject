@@ -16,7 +16,8 @@ import "./App.css";
 // import Login from "./components/login";
 
 // import {Ragister,Ragisteruser,SigninReg,Signinhome,Create,Cancel,Process,Reset,Confirm,Go_To_Orders,Cancel_Order} from "./components/button"
-import { Signin } from "./components/signin";
+import Refer from "./components/refer";
+import Register from "./components/register";
 function App() {
   return (
     <div className="App">
@@ -24,7 +25,14 @@ function App() {
       <header className="App-header">
         <Header />
       </header>
-      =======
+      <section>
+        <Login />
+      </section>
+      <footer>
+        <Refer />
+        <AboutUS />
+        <Footer />
+      </footer>
       {/* <Ragister/>
       <Ragisteruser/>
       <SigninReg/>
@@ -36,7 +44,6 @@ function App() {
       <Confirm/>
       <Go_To_Orders/>
       <Cancel_Order/> */}
-      <Signin />
       {/* >>>>>>> 925014e8d72c22a3d4dababc706616545b03a7e1 */}
     </div>
   );
