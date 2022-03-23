@@ -1,4 +1,4 @@
-import '../sidebar.css';
+import "../style/sidebar.css"
 import more from '../assests/more.svg';
 import homerun from '../assests/home-run.svg';
 import list from '../assests/list.svg';

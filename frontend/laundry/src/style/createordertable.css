@@ -1,0 +1,142 @@
+.maindiv{
+    height: 100%;
+width: 75%;
+margin-left: 15%;
+
+}
+.itemtable{
+    height: 100%;
+    width: 100%;
+}
+.tablehead{
+    height: 50px;
+    width: 100%;
+   
+    color:white;
+    background-color: black;
+}
+.tablerow{
+    height: 13%;
+    width: 100%;
+   
+}
+
+.prodtype{
+    width: 50px;
+ 
+}
+.quntity{
+    width: 10%;
+}
+.washtype{
+    width: 45;
+}
+.price{
+    width: 25%;
+}
+.washing{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//washing-machine.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+
+.ironong{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//ironing.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+
+.towel{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//towel.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+.bleach{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//bleach.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+
+table {
+  border: 1px solid gray;
+  }
+
+  /* td {
+    border: 1px solid gray;
+  } */
+.prodinfo{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.prodimage{
+    width: 50px;
+height: 50px;
+margin-top: 15px;
+}
+.prodname{
+    width: 60px;
+height: 20px;
+/* UI Properties */
+text-align: left;
+font: normal normal 600 14px/48px Open Sans;
+letter-spacing: 0px;
+color: #1D2022;
+opacity: 1;
+}
+.des{
+    width: 250px;
+height: 25px;
+/* UI Properties */
+text-align: left;
+font: normal normal normal 10px/48px Open Sans;
+letter-spacing: 0px;
+color: #76788B;
+opacity: 1;
+}
+.opretionimg{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 5px;
+   
+    
+}
+.namedex{
+    margin: 5px;
+}
+.initialprice{
+    width: 18px;
+height: 24px;
+/* UI Properties */
+text-align: center;
+font: normal normal normal 18px/24px Open Sans;
+letter-spacing: 0.43px;
+color: #605959;
+opacity: 0.73;
+padding-left: 120px;
+}
+.intinput{
+    height: 30px;
+}
+.orderbtn{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+.cle{
+    margin: 10px;
+    
+}
