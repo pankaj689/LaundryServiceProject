@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/popup.css';
+import '../styles/alert.css';
 
 const Popup = props => {
     const orderId = "123XXX" // dummy
@@ -22,4 +22,4 @@ const Popup = props => {
   );
 };
  
-export default Popup;
+export default Alert;
