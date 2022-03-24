@@ -1,8 +1,12 @@
+import Header from "./header";
+import "../styles/register.css";
+import Footer from './footer';
+import About from "./aboutus";
+import Refer from "./refer";
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom"
-// import axios from "axios"
 
-import "../styles/register.css";
+// import axios from "axios"
 const Register = () => {
   const navigate = useNavigate();
      const [user,setuser]= useState({ name:"", email:"" ,phone:"" ,state:"",district:"" ,address:""  ,pincode:"", password:""});
@@ -12,7 +16,6 @@ const Register = () => {
        console.log(e)
        name = e.target.name;
        value = e.target.value;
-
        setuser({...user,[name]:value});
   }
 console.log("user",user)
@@ -62,6 +65,7 @@ console.log("user",user)
 
   return (
     <>
+    <Header />
       <section className="Register">
         <div className="asideLeft">
           <div className="asideLeftHeader">
@@ -70,7 +74,9 @@ console.log("user",user)
           </div>
           <div className="asideLeftFooter">
             <p>Already Have Account?</p>
-            <a href="/" ><button className="signinButton">Sign In</button></a>
+
+            <a href ="/"><button className="signinButton">Sign In</button></a>
+
           </div>
         </div>
         <div className="registerForm">
@@ -78,6 +84,7 @@ console.log("user",user)
             <h1>REGISTER</h1>
           </div>
           <div>
+
             <form className="registerFormContents" method="POST" >
                 <input
                   required
@@ -173,10 +180,14 @@ console.log("user",user)
                 <div className="submitFormButton">
                   <input type="submit" value="Register" onClick={PostData} />
                 </div>
+
             </form>
           </div>
         </div>
       </section>
+      <Refer />
+      <About />
+      <Footer />
     </>
   );
 };

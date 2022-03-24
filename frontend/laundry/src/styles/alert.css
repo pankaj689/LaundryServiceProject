@@ -1,7 +1,13 @@
+
+
 .popup-box{
-    position: relative;
+    position: absolute;
+    z-index: 2;
+    top: 25vh;
+    opacity: 1;
     text-align: center;
-    height: 210px;
+    height: 250px;
+
     width: 415px;
     left: 400px;
     border-radius: 2px 2px 1px 1px;
@@ -21,7 +27,7 @@
     background: #5861AE 0% 0% no-repeat padding-box;
 }
 .alert-desc{
-    display: flex;
+    text-align: center;
     font-size: 14px;
     margin-left: 98.5px;
     text-align: center;
@@ -29,6 +35,15 @@
     height: 38px;
     margin-top: 35px;
 }
+
+.alert-desc p{
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 55px;
+    color: black;
+}
+
 .alert-desc p b{
     color: #5861AE;
 }
@@ -45,5 +60,5 @@
     background: #5861AE 0% 0% no-repeat padding-box;
     border: 1px solid #5861AE;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 45px;
 }

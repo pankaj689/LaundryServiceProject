@@ -1,15 +1,4 @@
-/* .table-head {
-    position: relative;
-    top:119px;
-    left: 106px;
-    width: 1200px;
-    border: 1px solid black;
-}  */
-/* body{
-    height: 1440px;
-    border: 1px solid black;
-    position: relative;
-} */
+
 .order-count{
     position: absolute;
     top: 119px;
@@ -85,7 +74,41 @@ thead tr th{
     color: white;
     font: normal normal 12px Open Sans;
 }
+tr td{
+    text-align: center;
+    font-size: 12px;
+}
+td a{
+    text-decoration: none;
+    color: red;
+}
 
+.even{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #EAEDF0;
+    opacity: 1;
+}
+.odd{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #EAEDF0;
+}
+.no-order{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    text-align: center;
+}
+@media only screen and (max-width: 480px){
+    .no-order{
+        left: 300px;
+    }
+      
+}
+.no-order p{
+    letter-spacing: 0px;
+    color: #222B45;
+    opacity: 0.5;
+}
 
 
 /* .order-count */

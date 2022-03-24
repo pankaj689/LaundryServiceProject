@@ -6,7 +6,6 @@ var bodyParser = require('body-parser')
 router.use(bodyParser.json())
 
 router.get("/Createorder", async (req, res) => {
-  
     // console.log("req.user",req.user)
     const orders =  await Createorder.find({user: req.user}); //user refernce needed for particular person
     if (orders){
@@ -22,10 +21,7 @@ router.get("/Createorder", async (req, res) => {
     }
 })
 router.get("/summary/:orderId", async (req, res) => {
-    console.log("summery1",req.user)
-    console.log("symmery2",req.body.orderId)
-    console.log("symmery3",req.params.orderId)
-   
+    // console.log("orderID",req.params.orderId)
     const summaryData =  await summary.find({user:req.params.orderId}); //user refernce needed for particular order
     if (summaryData){
         res.status(200).json({
@@ -57,7 +53,7 @@ router.post("/Createorder", async (req, res) => {
             user:req.user
         })
 
-        console.log("order",order)
+        // console.log("order",order)
         const summeryData = await summary.create({
             prodType: req.body.prodType,
             storeLocation:req.body.storeLocation,
@@ -71,7 +67,7 @@ router.post("/Createorder", async (req, res) => {
             user:req.body.orderId
             
         })
-        console.log("summeryData",summeryData)
+        // console.log("summeryData",summeryData)
         res.json({
             status: "success",
             order,
