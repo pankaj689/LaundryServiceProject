@@ -8,6 +8,7 @@ import Loop from "./creatordertable"
 import UserHeader from './userHeader';
 // import NoOrder from "./NoOrder"
 
+
 const userAccountPage = () => {
   return (
     <div >
@@ -19,6 +20,7 @@ const userAccountPage = () => {
                 <h5 className='initialOrder0' ><b>Create Orders</b></h5>
                 <input className='inputclass no-outline'   type="text" name="search"  />
                 </div>      
+              
         <div><Loop/></div>  
             </div>
         </div>
@@ -28,4 +30,4 @@ const userAccountPage = () => {
   );
 }
 
-export default userAccountPage;
+export default UserAccountPage;

@@ -1,7 +1,9 @@
 .maindiv{
     height: 100%;
-width: 75%;
+width: 80%;
 margin-left: 15%;
+display: flex;
+flex-flow: column;
 
 }
 .itemtable{
@@ -9,36 +11,56 @@ margin-left: 15%;
     width: 100%;
 }
 .tablehead{
-    height: 50px;
-    width: 100%;
-   
+    height: 40px;
+    width: 99.4%;
     color:white;
     background-color: black;
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    padding-top: 10px;
 }
 .tablerow{
-    height: 13%;
+    height:70px;
     width: 100%;
+    border: 1px solid gray;
+    display: flex;
+   flex-flow: row;
+   padding: 5px;
    
 }
 
 .prodtype{
-    width: 50px;
+    width: 350px;
+    margin-top: 10px;
  
 }
 .quntity{
-    width: 10%;
+    width: 100px;
+    margin-top: 10px;
 }
 .washtype{
-    width: 45;
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 10px;
 }
 .price{
-    width: 25%;
+    width: 200px;
+    margin-top: 10px;
 }
 .washing{
     width: 50px;
     height: 50px;
 /* UI Properties */
 background: transparent url('../assests//washing-machine.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+.washing2{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//washing-machine-hilight.jpg') 0% 0% no-repeat padding-box;
 opacity: 1;
 margin: 10px;
 }
@@ -51,12 +73,28 @@ background: transparent url('../assests//ironing.jpg') 0% 0% no-repeat padding-b
 opacity: 1;
 margin: 10px;
 }
+.ironong2{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//ironing-hilight.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
 
 .towel{
     width: 50px;
     height: 50px;
 /* UI Properties */
 background: transparent url('../assests//towel.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
+.towel2{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//towel-hilight.png') 0% 0% no-repeat padding-box;
 opacity: 1;
 margin: 10px;
 }
@@ -68,23 +106,30 @@ background: transparent url('../assests//bleach.jpg') 0% 0% no-repeat padding-bo
 opacity: 1;
 margin: 10px;
 }
+.bleach2{
+    width: 50px;
+    height: 50px;
+/* UI Properties */
+background: transparent url('../assests//bleach-hilight.jpg') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin: 10px;
+}
 
 table {
   border: 1px solid gray;
   }
 
-  /* td {
-    border: 1px solid gray;
-  } */
+ 
 .prodinfo{
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    width: 350px;
 }
 .prodimage{
     width: 50px;
 height: 50px;
-margin-top: 15px;
+margin-top: 10px;
 }
 .prodname{
     width: 60px;
@@ -94,6 +139,16 @@ text-align: left;
 font: normal normal 600 14px/48px Open Sans;
 letter-spacing: 0px;
 color: #1D2022;
+opacity: 1;
+}
+.prodname2{
+    width: 60px;
+height: 20px;
+/* UI Properties */
+text-align: left;
+font: normal normal 600 14px/48px Open Sans;
+letter-spacing: 0px;
+color: #5861AE;
 opacity: 1;
 }
 .des{
@@ -110,26 +165,33 @@ opacity: 1;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    padding: 5px;
+    height: 50px;
+    width: 400px;
+    margin-left: 50px;
+    /* border: 2px solid orangered; */
    
     
 }
 .namedex{
-    margin: 5px;
+    margin: 3px;
 }
 .initialprice{
-    width: 18px;
-height: 24px;
+    width: 150px;
+height: 20px;
 /* UI Properties */
 text-align: center;
 font: normal normal normal 18px/24px Open Sans;
 letter-spacing: 0.43px;
 color: #605959;
 opacity: 0.73;
-padding-left: 120px;
+/* padding-left: 120px; */
+margin-left: 10px;
+/* border: 2px solid blueviolet; */
 }
 .intinput{
     height: 30px;
+    width: 50px;
+   
 }
 .orderbtn{
     display: flex;
@@ -139,4 +201,15 @@ padding-left: 120px;
 .cle{
     margin: 10px;
     
+}
+.res{
+    height: 50px;
+    display: flex;
+    flex-flow: row;
+    /* border: 2px solid green; */
+}
+.inputdiv{
+    width: 50px; 
+    margin-right: 20px;
+    /* border: 2ps solid green; */
 }
