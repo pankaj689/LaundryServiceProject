@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../style/createordertable.css';
 import {Cancel,Process} from "./button"
-function Loop() {
-  const [dt, setdt] = useState([])
-  function item(element, index) {
 
+
+function Loop(props) {
+  const token = localStorage.getItem('token');
+  console.log(token);
+  const [dt, setdt] = useState([])
+
+  function item(element, index) {
       return (        
   <tr className='tablerow' key={index}>
     <td className='prodinfo '>
@@ -52,28 +56,12 @@ function Loop() {
          <div className='cle'  ><Cancel/></div>
       <div className='cle'><Process/></div>
         </div>
+      
       </div>
+      
   )
 }
 
 export default Loop
 
 
-// {dt.map(item =>{
-//   return  (<tr>
-//     <td>
-//       {item.prodImg}
-//       <h1>{item.prodType}</h1>
-//       <p>{item.prodDesc} </p>
-//      </td>
-//     {/* </td>
-//     <td>
-//       {item.prodType}
-//     </td>
-//     <td>
-//      {item.prodDesc} 
-//     </td> */}
-//   </tr>)
-  
-  
-// })}

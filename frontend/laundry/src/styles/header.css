@@ -42,16 +42,20 @@ li {
   font: normal normal normal 14px/19px Avenir;
   letter-spacing: 1.05px;
 }
+ul a{
+  text-decoration: none;
+}
+.signin-btn{
+  color: #FFFFFF;
+  background-color: #5861ae;
+}
 
 nav .userAcc{
   background-color: #5861ae;
   color: white;
-  /* width: 113px;
-  height: 80px; */
   background: #5861ae 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
-  /* border: none; */
  
 }
 .userAcc{
@@ -94,4 +98,7 @@ nav .userAcc{
   text-transform: capitalize;
   opacity: 1;
   
+}
+input:focus{
+  outline: none;
 }

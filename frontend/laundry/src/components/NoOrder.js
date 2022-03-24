@@ -1,12 +1,14 @@
 import React from 'react';
 import {Create} from "./button"
 const NoOrder  = function noorder () {
-
     return (
-        <div className='btndiv'>
-        <p className='NoOrders' >No Orders avaialble</p>
-         <div className="btnCreat"><Create /></div>
-    </div>
+        <div className='no-order'>
+                <p>No orders available</p>
+                <div>
+                    <a href ="/createorder"><Create /></a>
+                </div>
+            </div>
+ 
     )
 }
 

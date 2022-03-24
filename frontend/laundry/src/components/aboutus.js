@@ -1,5 +1,9 @@
 import React from "react";
 import "../styles/aboutus.css";
+import fbimg from '../assests/facebook.svg';
+import instaimg from '../assests/instagram.svg';
+import linkedimg from '../assests/linkedin.svg';
+
 const About = () => {
   return (
     <>
@@ -28,11 +32,11 @@ const About = () => {
           <h1>SOCIAL MEDIA</h1>
           <div className="SocialMediaIcon">
             <img
-              src="C:\Users\hp\Laundary Project\LaundryServiceProject\frontend\laundry\src\assests\facebook.svg"
+              src={fbimg}
               alt="facebook"
             ></img>
-            <img src="./assests/instagram.png" alt="insta"></img>
-            <img src="./assests/linkedin.png" alt="linkedinx"></img>
+            <img src={instaimg} alt="insta"></img>
+            <img src={linkedimg} alt="linkedinx"></img>
           </div>
         </div>
       </section>

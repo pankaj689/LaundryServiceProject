@@ -1,8 +1,13 @@
 import React from "react";
+import Header from "./header";
 import "../styles/register.css";
+import Footer from './footer';
+import About from "./aboutus";
+import Refer from "./refer";
 const Register = (props) => {
   return (
     <>
+    <Header />
       <section className="Register">
         <div className="asideLeft">
           <div className="asideLeftHeader">
@@ -11,7 +16,7 @@ const Register = (props) => {
           </div>
           <div className="asideLeftFooter">
             <p>Already Have Account?</p>
-            <button className="signinButton">Sign In</button>
+            <a href ="/"><button className="signinButton">Sign In</button></a>
           </div>
         </div>
         <div className="registerForm">
@@ -113,12 +118,15 @@ const Register = (props) => {
                 </span>
               </div>
               <div className="submitFormButton">
-                <input type="submit" value="Register" />
+  <input type="submit" value="Register" />
               </div>
             </form>
           </div>
         </div>
       </section>
+      <Refer />
+      <About />
+      <Footer />
     </>
   );
 };

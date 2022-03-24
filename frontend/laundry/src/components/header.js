@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/header.css";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <>
       <header>
@@ -11,7 +11,7 @@ const Header = (props) => {
             <li>Home</li>
             <li>Pricing</li>
             <li>Carrer</li>
-            <button>Sign In</button>
+            <a href="/"><li className="signin-btn">Sign In</li></a>
           </ul>
         </nav>
       </header>
