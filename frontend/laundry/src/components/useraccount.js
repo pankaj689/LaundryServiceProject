@@ -8,7 +8,7 @@ import Footer  from './footer';
 import Loop from "./creatordertable"
 // import NoOrder from "./NoOrder"
 
-const userAccountPage = () => {
+const UserAccountPage = () => {
 
   return (
     // <Router>
@@ -35,10 +35,7 @@ const userAccountPage = () => {
                 <h1 className='initialOrder0' ><b>Orders | 0</b></h1>
                 <input className='inputclass no-outline'   type="text" name="search"  />
                 </div>
-                {/* <Routes>
-                  <Route exact path='/no' elemtent={ <NoOrder/>} ></Route>
-                  <Route exact path='/' elemtent={<Loop/>} ></Route>  
-          </Routes> */}
+              
           
         <div><Loop/></div>  
             </div>
@@ -49,4 +46,4 @@ const userAccountPage = () => {
   );
 }
 
-export default userAccountPage;
+export default UserAccountPage;
