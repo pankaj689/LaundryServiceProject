@@ -9,7 +9,7 @@ const SucessNote = () =>{
                 <h>Your order is Successfull</h>
             </div>
             <p>You can track the delivery in "Orders" section. </p>
-            <button>Go to orders</button>
+            <a href ="/history"><button>Go to orders</button></a>
         </div>
 
     </div>)

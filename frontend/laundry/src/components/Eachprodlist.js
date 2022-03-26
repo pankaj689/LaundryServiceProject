@@ -1,8 +1,9 @@
-import React , { useState}  from "react"
+import React , { useState}  from "react";
+import { Cancel, Process } from "./button";
 import '../style/createordertable.css';
 import "../style/stylebtn.css"
 
-function Eachprodlist (props,index) {
+function Eachprodlist (props, index) {
   const [user, setuser] = useState({ prodType: "", quantity: 0, wash: "", press: "", fold: "", pack: "", price: "" });
   // const [prodarry, setprodarry] = useState([]);
   const [totalprice, settotalprice] = useState(0);
@@ -11,11 +12,11 @@ function Eachprodlist (props,index) {
   const [eachitemdetails, seteachitemdetails] = useState([]);
   const [blarry, setblarry] = useState([]);
   let name, value;
+  
   const productname = (e) => {
-    console.log("eeeprodname2",e)
     console.log("e.target.name",e.target.name)
     name = e.target.name;
-    console.log("e.target.value",e.target.value)
+    // console.log("e.target.value",e.target.value)
     value = e.target.value;
     seteachitemdetails(eachitemdetails=>[...eachitemdetails,value])
     setuser({ ...user, [name]: value });
@@ -39,6 +40,8 @@ function Eachprodlist (props,index) {
     setuser({ ...user, [name]: value });
     setStylewash("washing2");
   };
+
+
 
   const [styleiron, setStyleiron] = useState("ironong");
 
@@ -124,6 +127,7 @@ console.log("blarray in side pricefun",blarry)
     seteachitemdetails([])
     // setuser({ name: "", quantity: 0, blarr, price: "" });
   }
+  console.log(user);
 
   
     return (
@@ -148,6 +152,7 @@ console.log("blarray in side pricefun",blarry)
           <button className={resbtn} onClick={resFun} >Reset</button>
         </div>
       </div>
+
     )
   }
 

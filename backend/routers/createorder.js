@@ -38,6 +38,7 @@ router.get("/summary/:orderId", async (req, res) => {
 
 
 router.post("/Createorder", async (req, res) => {
+       console.log("req.body", req.body)
     try {
         // console.log("req.body", req.body)
         const order = await Createorder.create({
@@ -61,7 +62,7 @@ router.post("/Createorder", async (req, res) => {
             storePhone :req.body.storePhone,
             quantity: req.body.quantity,
             subTotal: req.body.subTotal,
-            total: req.body.total,
+            price: req.body.total,
             pickupcharges :req.body.pickupcharges,
             address: req.body.address,
             user:req.body.orderId
@@ -76,7 +77,7 @@ router.post("/Createorder", async (req, res) => {
     } catch (e) {
         res.status(400).json({
             status: "failed",
-            massege: "e.massege in side catch"
+            massege: e.message
         })
     }
 })

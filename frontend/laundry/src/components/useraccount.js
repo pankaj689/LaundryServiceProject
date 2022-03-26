@@ -9,7 +9,7 @@ import UserHeader from './userHeader';
 // import NoOrder from "./NoOrder"
 
 
-const userAccountPage = () => {
+const UserAccountPage = () => {
   return (
     <div >
         <UserHeader />

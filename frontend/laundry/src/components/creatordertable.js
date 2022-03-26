@@ -3,10 +3,13 @@ import axios from 'axios'
 import '../style/createordertable.css';
 import "../style/stylebtn.css"
 import Eachprodlist from "./Eachprodlist"
-import { Cancel, Process } from "./button"
+import Summary from './summary';
+
+
 function Loop(props) {
   const token = localStorage.getItem('token');
   console.log(token);
+  
   const [dt, setdt] = useState([])
 
   useEffect(() => {
@@ -18,9 +21,9 @@ function Loop(props) {
       })
   }, [])
   console.log("dt", dt)
-  
+
   return (
-    <div className='maindiv'>
+    <><div className='maindiv'>
       <div className='itemtable'>
         <div className='tablehead'>
           <div className='prodtype'>Produt Types</div>
@@ -28,19 +31,12 @@ function Loop(props) {
           <div className='washtype'>Wash Type</div>
           <div className='price'>Price</div>
         </div>
-  
-      </div>  
-
-        {dt.map((item)=>{
-          return <Eachprodlist  {...item} />
-        })}
       </div>
-      <div className='orderbtn' >
-        <div className='cle'  ><Cancel /></div>
-        <div className='cle'><Process /></div>
-      </div>
-    </div>
 
+      {dt.map((item) => {
+        return <Eachprodlist {...item} />;
+      })}
+    </div></>
   )
 }
 

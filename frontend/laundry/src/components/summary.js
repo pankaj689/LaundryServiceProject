@@ -16,7 +16,7 @@ const Summary = () => {
             <div className="name">
               <p>Store Location</p>
             </div>
-            <input type="text" placeholder="   Store location"></input>
+            <input type="text" placeholder=" Store location"></input>
           </div>
           <div className="col2">
             <p>
