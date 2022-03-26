@@ -33,7 +33,7 @@ export default function Login(){
   ).then(res =>  localStorage.setItem('token', res.data.token))
 
 
-  window.alert("logged in sucessfull")
+  window.alert("logged in sucessfully")
   navigate("/createorder")
     }catch(e){
       if (e.response.status === 404){

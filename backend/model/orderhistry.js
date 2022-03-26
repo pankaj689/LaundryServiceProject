@@ -11,7 +11,7 @@ const orderSchema = new Schema({
     price :{type  : Number ,required: true},
     status:{type : String , default:"Ready to Pick"},
     user:{type:Schema.Types.ObjectId, ref:"userdetails"} ,
-    refsymmery:{type:Schema.Types.ObjectId, ref:"orderHistory"},   
+    // refsymmery:{type:Schema.Types.ObjectId, ref:"orderHistory"},   
 }, {strict: false },{timestamps:true});
 
 const orderHistory = mongoose.model('orderHistory', orderSchema);

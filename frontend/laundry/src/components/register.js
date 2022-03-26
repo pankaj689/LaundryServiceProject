@@ -21,7 +21,6 @@ const Register = () => {
 console.log("user",user)
   const PostData = async (e)=>{
     e.preventDefault();
-
      const {name, email,phone,state,district ,address  ,pincode, password} = user ;
     // const data = await axios.post("http://localhost:5000/api/register", user,
     //     {headers: {
@@ -54,13 +53,13 @@ console.log("user",user)
 
       const data = await res.json();
       if(data.status === 400  || !data ) {
-        window.alert("Invalid Ragistretion")
-        console.log("Invalid Ragistretion")
+        window.alert("Invalid Registration")
+        console.log("Invalid Registration")
       } else {
-        window.alert("Ragistretion Succesful")
-        console.log(" Ragistretion Succesful")
+        window.alert("Registration Succesfull")
+        console.log(" Registration Succesfull")
       }
-      navigate("/login")
+      navigate("/")
   }
 
   return (
@@ -105,6 +104,7 @@ console.log("user",user)
                   name="phone"
                 ></input>
                 <select required name="state" id="state" value={user.state} onChange={handleinput} className="form-control">
+                <option value="" disabled selected hidden>select</option>
                   <option value="Andhra Pradesh">Andhra Pradesh</option>
                   <option value="Andaman and Nicobar Islands">
                     Andaman and Nicobar Islands
