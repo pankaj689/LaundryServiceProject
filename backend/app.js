@@ -17,7 +17,7 @@ mongoose.connect(url, function (err, db) {
 });
 
 const whitelist =[
-  "http://localhost:5000"
+  "http://localhost:3000"
 ]
 
 app.use(cors({

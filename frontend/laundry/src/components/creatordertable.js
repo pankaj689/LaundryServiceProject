@@ -10,6 +10,8 @@ import Summary from  "./summary"
 
 const sendOrder = {}
 
+=======
+
 function Loop(props) {
   const token = localStorage.getItem('token');
   console.log(token);
@@ -24,6 +26,7 @@ function Loop(props) {
       })
   }, [])
   console.log("dt", dt)
+
 
   const [user, setuser] = useState({ quantity: 0, price: "" });
   // const [prodarry, setprodarry] = useState([]);
@@ -321,6 +324,28 @@ function Loop(props) {
       <div className='orderbtn'>
         <div className='cle'><Cancel /></div>
         <div className='cle' onClick={console.log("processbtn",sendOrder)}><Process /></div>
+
+  
+  return (
+    <div className='maindiv'>
+      <div className='itemtable'>
+        <div className='tablehead'>
+          <div className='prodtype'>Produt Types</div>
+          <div className='quntity'>Quantity</div>
+          <div className='washtype'>Wash Type</div>
+          <div className='price'>Price</div>
+        </div>
+  
+      </div>  
+
+        {dt.map((item)=>{
+          return <Eachprodlist  {...item} />
+        })}
+      </div>
+      <div className='orderbtn' >
+        <div className='cle'  ><Cancel /></div>
+        <div className='cle'><Process /></div>
+
       </div>
           
 

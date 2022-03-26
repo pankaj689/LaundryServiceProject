@@ -84,12 +84,14 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
       }
-      const { email, password, phone } = req.body;
+      console.log(req.body);
+      const { email, password } = req.body;
 
       if (email) {
         const user = await userdetails.findOne({ email: email });
+        console.log(user)
         if (!user) {
-          res.status(401).json({
+          return res.status(404).json({
             status: "failed",
             message: "Invalid user",
           });
@@ -97,12 +99,12 @@ router.post(
         bcrypt.compare(password, user.password).then(function (result) {
           if (result) {
             var token = jwt.sign({ exp: Math.floor(Date.now() / 1000) + (120 * 120),data: user._id }, SECRET);      //_id: user._id
-            res.json({ 
+            return res.json({ 
               status: "sucess",
               token,
             });
           } else {
-            res.status(401).json({
+            return res.status(401).json({
               status: "failed",
               message: "Not Authenticated",
             });
@@ -111,7 +113,7 @@ router.post(
       } else if (phone) {
         const user = await userdetails.findOne({ phone: phone });
         if (!user) {
-          res.status(401).json({
+          return res.status(401).json({
             status: "failed",
             message: "Invalid user",
           });
@@ -119,13 +121,12 @@ router.post(
         bcrypt.compare(password, user.password).then(function (result) {
           if (result) {
             var token = jwt.sign({exp: Math.floor(Date.now() / 1000) + (120 * 120), data: user._id }, SECRET);
-
-            res.json({
+            return res.json({
               status: "sucess",
               token,
             });
           } else {
-            res.status(401).json({
+            return res.status(401).json({
               status: "failed",
               message: "Not Authenticated",
             });
