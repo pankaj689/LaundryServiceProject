@@ -4,12 +4,13 @@ import Sidebar from "./sidebar"
 import "../style/useraccount.css"
 import Footer  from './footer';
 // import {Create} from "./button"
-import Loop from "./creatordertable"
+import Loop from "./createordertable2"
+
 import UserHeader from './userHeader';
 // import NoOrder from "./NoOrder"
 
+const UserAccountPage = () => {
 
-const userAccountPage = () => {
   return (
     <div >
         <UserHeader />
@@ -26,7 +27,7 @@ const userAccountPage = () => {
         </div>
         <Footer/>
     </div>
-    // </Router>
+    
   );
 }
 
