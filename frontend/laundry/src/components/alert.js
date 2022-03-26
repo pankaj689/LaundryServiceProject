@@ -1,8 +1,10 @@
 import React from "react";
 import '../styles/alert.css';
 
-const Popup = props => {
-    const orderId = "123XXX" // dummy
+
+const Alert = props => {
+
+   const orderId = "123XXX" // dummy
   return (
     <div className="popup-box">
       <div className="box">

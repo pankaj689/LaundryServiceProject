@@ -1,6 +1,5 @@
 .Register {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   min-height: fit-content;
   width: 100%;
@@ -14,6 +13,7 @@
   position: relative;
   height: 40em;
   margin-top: 5px;
+  border-right: 1px solid #4552c1;
 }
 .asideLeftHeader {
   position: absolute;
@@ -22,7 +22,7 @@
 }
 .asideLeftFooter {
   position: absolute;
-  bottom: 2%;
+  bottom: 10%;
   padding: 15%;
 }
 .asideLeftFooter p {
@@ -58,8 +58,7 @@
 .signinButton {
   border: 2px solid #4552c1;
   border-radius: 5%;
-  color: white;
-  background-color: #5861ae;
+  width: 100px;
   padding: 6% 12%;
 }
 .signinButton a {
@@ -69,6 +68,11 @@
   opacity: 1;
   color: white;
   text-decoration: none;
+}
+.signinButton:hover{
+  background-color: #4552c1;
+  color: #ffffff
+
 }
 /* Form Styling */
 .registerForm {

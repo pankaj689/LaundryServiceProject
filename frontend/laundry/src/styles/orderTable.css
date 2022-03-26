@@ -1,0 +1,19 @@
+
+.product_container, table{
+    margin-left: 5%;
+    width: 90%;
+    height: auto;
+}
+
+thead th{
+    color: #ffffff;
+}
+.prod-data{
+    display: flex;
+    width: 200px;
+}
+.prod-data img{
+    height: 100px;
+    width: 100px;
+}
+

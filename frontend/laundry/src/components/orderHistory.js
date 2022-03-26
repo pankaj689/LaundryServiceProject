@@ -1,17 +1,44 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Sidebar from "./sidebar";
 import Header from "./header";
 import '../styles/orderHistory.css';
 import search from '../assests/search.svg'
+import NoOrder from "./NoOrder";
+import Footer from "./footer";
 
 const OrderHistory = () => {
-    // const [count, setCount] = useState(0)
-    const count = 0;
+    const [order, setOrders] = useState([])
+    const token = localStorage.getItem('token');
+    useEffect(() =>{
+        axios.get("http://localhost:5000/api/Createorder", {
+            headers: {
+              "Authorization": 'test ' + token
+            }
+          }).then(res => setOrders(res.data.orders));
+   
+    }
+    ,[])
+    let orderCount = 0
+    let xx = 'even'
+    orderCount = order.length > 0 ? order.length: orderCount;
+    console.log(order)
+    let count = 0
+    if (orderCount === 0){
+        return (
+        <div>
+        <Header/>
+        <Sidebar />
+        <NoOrder />
+        <Footer />
+        </div>);
+    }else{
     return (
         <div>
             <Header />
             <Sidebar />
             <div className ="table-head">
-                <p className ="order-count">Orders | {count}</p>
+                <p className ="order-count">Orders | {orderCount}</p>
                 <button className="create-btn">Create</button>
                 <img className="search-glass" src ={search} alt ="" />
                 <input  type="search" id ="search-bar" />
@@ -34,23 +61,32 @@ const OrderHistory = () => {
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    {order.map(item => {
+                        count += 1
+                        if (count %2 !==0){
+                            xx = 'odd'
+                        }
+                        return(
+                           <tr className= {xx}>
+                            <td>{item.orderId}</td>
+                            <td>{item.orderDate}</td>
+                            <td>{item.storeLocation}</td>
+                            <td>{item.city}</td>
+                            <td>{item.storePhone}</td>
+                            <td>{item.totalItem}</td>
+                            <td>{item.price}</td>
+                            <td>{item.status}</td>
+                            <td></td>
+                            <td>view</td>
+                        </tr>
+                        )
+                    })}
+                   
                 </tbody>
             </table>
             </div>
         </div>
-    )
+    )}
 }
 
 export default OrderHistory;

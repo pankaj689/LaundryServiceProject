@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
   font-style: Avenir;
   height: fit-content;
   background-color: #b9c0fd1a;
