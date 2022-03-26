@@ -5,7 +5,8 @@
   width: 60%;
   height: 933px;
   /* UI Properties */
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+
   opacity: 1;
   border: 1px solid black;
 }
@@ -13,10 +14,11 @@
   width: 100%;
   height: 70px;
   /* UI Properties */
-  background: #5861ae 0% 0% no-repeat padding-box;
+  background: #5861AE 0% 0% no-repeat padding-box;
   font: normal normal 600 22px/20px Open Sans;
   letter-spacing: 0px;
-  color: #ffffff;
+  color: #FFFFFF;
+
   opacity: 1;
 }
 .header-left {
@@ -26,14 +28,14 @@
 .header-right {
   float: right;
   padding: 15px 32px;
-  color: #ffffff;
+
+  color: #FFFFFF;
 }
 .second-section {
   width: 100%;
   height: 98px;
   /* UI Properties */
   background: #F4F9FF 0% 0% no-repeat padding-box;
- 
   opacity: 1;
 }
 /* .name p{
@@ -64,10 +66,16 @@ padding-left: 20px;
 .third-section {
   text-align: left;
   padding: 15px;
+
+  color: black;
+
 }
 .third-section p {
   font: normal normal 600 14px/19px Open Sans;
   height: auto;
+
+  color: black;
+
 }
 .third-section ul li {
   text-align: left;
@@ -77,6 +85,7 @@ padding-left: 20px;
 }
 .third-section ul {
   font: normal normal normal 18px/24px Open Sans;
+1
   border: 1px solid black;
 }
 .total-price {
@@ -84,11 +93,66 @@ padding-left: 20px;
   padding: 0;
   width: 100%;
   height: 49px;
+  display: flex;
+  justify-content: right;
   /* UI Properties */
-  background: #5861ae 0% 0% no-repeat padding-box;
+  background: #5861AE 0% 0% no-repeat padding-box;
+  color: white;
   opacity: 1;
+  padding-left: 10px;
 }
 .address-box {
   border: 1px solid grey;
   width: 40%;
 }
+.pricedata{
+  display: flex;
+  justify-content: right;
+  /* border: 2px solid red; */
+  width: 80%;
+  margin-left: 20%;
+}
+.flt{
+margin-left: 50px;
+padding-left: 50px;
+}
+
+.Sub{
+  /* border: 2px solid blue; */
+  margin-right: 50px;
+}
+.Pickup{
+  /* border: 2px solid blue; */
+  margin-right: 10%;
+  width: 200px;
+}
+.total{
+  /* margin-left: 10%; */
+  padding-left: 50px;
+}
+.address{
+  width: 100%;
+  height: 300px;
+  border: 2px solid blue;
+}
+
+.footer{
+  width: 100%;
+  height: 70px;
+  background: lightgray 0% 0% no-repeat padding-box;
+box-shadow: 0px -3px 6px #00000015;
+opacity: 1;
+display: flex;
+justify-content: right;
+padding: 5px;
+}
+
+.hidtext{
+  display: none;
+  margin: 1px;
+}
+
+.hidtext2{
+  margin: 1px;
+}
+

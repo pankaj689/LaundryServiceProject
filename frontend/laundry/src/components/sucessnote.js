@@ -1,6 +1,8 @@
 import '../styles/sucessnote.css';
-const SucessNote = () =>{
-    return (<div className="successContainer">
+
+const SucessNote = (props) =>{
+    return (props.trigger)?(
+    <div className="successContainer">
         <div className='success-content'>
             <div className="check-logo">
                 <span>&#10003;</span>
@@ -12,7 +14,7 @@ const SucessNote = () =>{
             <a href ="/history"><button>Go to orders</button></a>
         </div>
 
-    </div>)
+    </div>) :"";
 }
 
 export default SucessNote;
