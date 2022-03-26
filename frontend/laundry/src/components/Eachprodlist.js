@@ -1,15 +1,17 @@
-import React , { useState}  from "react";
-import { Cancel, Process } from "./button";
+import React , { useState}  from "react"
 import '../style/createordertable.css';
 import "../style/stylebtn.css"
-
 
 function Eachprodlist (props,index) {
 console.log("props",props)
 console.log("props.prodType",props.prodType)
-const [user, setuser] = useState({ quantity:0 ,price: "" });
 
+  // const [user, setuser] = useState({ prodType: "", quantity:0, wash: "", press: "", fold: "", pack: "", price: "" });
 
+  const [user, setuser] = useState({ quantity:0 ,price: "" });
+  // const [prodarry, setprodarry] = useState([]);
+
+// const dumarray = []
 
   const [prodtype,setprodtype] = useState("")
   const [quantity, setquantity] = useState(0)
@@ -24,12 +26,12 @@ const [user, setuser] = useState({ quantity:0 ,price: "" });
   // const [eachitemdetails, seteachitemdetails] = useState([]);
   // const [blarry, setblarry] = useState([]);
   let name, value;
-
   const productname1 = (e) => {
- 
+    console.log("eg",e)
+    console.log("e.target",e.target)
+    console.log("e.target.name",e.target.name)
+    console.log("e.target.value",e.target.value)
     name = e.target.name;
-
-
     value = props.prodType;
     setuser({...user,[name]:value});
     
@@ -73,8 +75,6 @@ const [user, setuser] = useState({ quantity:0 ,price: "" });
     // setuser({ ...user, [name]: value });
     setStylewash("washing2");
   };
-
-
 
   const [styleiron, setStyleiron] = useState("ironong");
 
@@ -192,7 +192,6 @@ console.log(" value",value)
 
     // setuser({ name: "", quantity: 0, blarr, price: "" });
   }
-  console.log(user);
 
   
     return (
@@ -217,7 +216,6 @@ console.log(" value",value)
           <button className={resbtn} onClick={resFun} >Reset</button>
         </div>
       </div>
-
     )
   }
 

@@ -26,7 +26,6 @@ router.post(
   body("address"),
   body("pincode"),
   async (req, res) => {
-    console.log(req.body);
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {

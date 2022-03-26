@@ -56,20 +56,16 @@
     position: absolute;
     top: 207px;
     left: 99px;
-    width: 90vw;
+    width: 1100px;
     /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     /* border: 1px solid #EAEDF0; */
-    
-    opacity: 1;
-}
-.history-table table{
-    width: 100%;
-    margin-left: 0;
     border: 1px solid black;
+    opacity: 1;
 }
 thead{
     background-color: #1E2022;
+    margin: 0 0 0 0;
 }
 thead tr th{
     margin: 0 0 0 0;
@@ -82,10 +78,7 @@ tr td{
     text-align: center;
     font-size: 12px;
 }
-table tr {
-    height: 30px;
-}
-td p{
+td a{
     text-decoration: none;
     color: red;
 }
@@ -96,7 +89,7 @@ td p{
     opacity: 1;
 }
 .odd{
-    background: #EAEDF0 0% 0% no-repeat padding-box;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
     border: 1px solid #EAEDF0;
 }
 .no-order{
@@ -105,18 +98,17 @@ td p{
     left: 600px;
     text-align: center;
 }
-
+@media only screen and (max-width: 480px){
+    .no-order{
+        left: 300px;
+    }
+      
+}
 .no-order p{
     letter-spacing: 0px;
     color: #222B45;
     opacity: 0.5;
 }
 
-.cancel-order p{
-    font-size: 11px;
-    letter-spacing: 0px;
-}
-.cancel-red{
-    color: red
-}
+
 /* .order-count */

@@ -1,20 +1,14 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from "./sidebar";
-import UserHeader from './userHeader'
+import Header from "./header";
 import '../styles/orderHistory.css';
 import search from '../assests/search.svg'
 import NoOrder from "./NoOrder";
 import Footer from "./footer";
-import CancelOrder from './cancelOrder';
-import { FaRegEye } from 'react-icons/fa';
-
 
 const OrderHistory = () => {
     const [order, setOrders] = useState([])
-    const [cls, setCls] = useState("")
-    const [pop, setPop] = useState(false)
-    const [orderI, setOrderI] = useState("")
     const token = localStorage.getItem('token');
     useEffect(() =>{
         axios.get("http://localhost:5000/api/Createorder", {
@@ -22,33 +16,26 @@ const OrderHistory = () => {
               "Authorization": 'test ' + token
             }
           }).then(res => setOrders(res.data.orders));
+   
     }
     ,[])
-
-
-    const handleStatusUpdate = (idx) => {
-        setOrderI(idx)
-        setPop(true)
-        setCls('order-container')
-      }
-
     let orderCount = 0
     let xx = 'even'
     orderCount = order.length > 0 ? order.length: orderCount;
-    // console.log(order)
+    console.log(order)
     let count = 0
     if (orderCount === 0){
         return (
         <div>
-        <UserHeader/>
+        <Header/>
         <Sidebar />
         <NoOrder />
         <Footer />
         </div>);
     }else{
     return (
-        <div className={cls}>
-            <UserHeader />
+        <div>
+            <Header />
             <Sidebar />
             <div className ="table-head">
                 <p className ="order-count">Orders | {orderCount}</p>
@@ -78,8 +65,6 @@ const OrderHistory = () => {
                         count += 1
                         if (count %2 !==0){
                             xx = 'odd'
-                        }else{
-                            xx = 'even'
                         }
                         return(
                            <tr className= {xx}>
@@ -89,11 +74,10 @@ const OrderHistory = () => {
                             <td>{item.city}</td>
                             <td>{item.storePhone}</td>
                             <td>{item.totalItem}</td>
-                            <td>{item.total}</td>
-                            <td className={(item.status ==="Cancelled"?"cancel-red": "")}>{item.status}</td>
-                            <td className='cancel-order'>{(item.status === "Cancelled")?"":
-                                <p onClick = {() =>handleStatusUpdate(item.orderId)}>Cancel Order</p>}</td>
-                            <td><FaRegEye/></td>
+                            <td>{item.price}</td>
+                            <td>{item.status}</td>
+                            <td></td>
+                            <td>view</td>
                         </tr>
                         )
                     })}
@@ -101,7 +85,6 @@ const OrderHistory = () => {
                 </tbody>
             </table>
             </div>
-            <CancelOrder  orderState = {pop} popTrigger ={setPop} orderI ={orderI}></CancelOrder>
         </div>
     )}
 }
