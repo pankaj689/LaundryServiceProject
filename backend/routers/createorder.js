@@ -61,7 +61,7 @@ router.post("/Createorder", async (req, res) => {
             storePhone :req.body.storePhone,
             quantity: req.body.quantity,
             subTotal: req.body.subTotal,
-            total: req.body.total,
+            price: req.body.total,
             pickupcharges :req.body.pickupcharges,
             address: req.body.address,
             user:req.body.orderId
