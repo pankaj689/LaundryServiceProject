@@ -1,4 +1,7 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .order-count{
     position: absolute;
     top: 119px;
@@ -11,22 +14,22 @@
     letter-spacing: 0px;
     color: #1E2022;
     text-transform: capitalize;
-    opacity: 1;
+    /* opacity: 1; */
 }
 .create-btn{
+    font-weight: 100;
     position: absolute;
+    font-size: 14px;
+    color: #5861AE;
     top: 113px;
-    /* left: 870px; */
     left: 870px;
     width: 107px;
     height: 32px;
     /* UI Properties */
     border: 1px solid #5861AE;
     border-radius: 4px;
-    opacity: 1;
-}
-.cls{
-    display: none;
+    /* opacity: 1; */
+    background-color: #FFFFFF;
 }
 #search-bar{
     outline: 0;
@@ -34,12 +37,12 @@
     border-color: #1E2022;
     /* Layout Properties */
     position: absolute;
-    top: 119px;
+    top: 150px;
     left: 1000px;
     width: 200px;
-    height: 21px;
+    height: 25px;
     /* UI Properties */
-    opacity: 1;
+    /* opacity: 1; */
 }
 #search-bar:focus {
     border: 1px solid #5861AE
@@ -47,7 +50,7 @@
   .search-glass{
       z-index: 2;
     position: absolute;
-    top: 117px;
+    top: 149px;
     left: 1000px;
     width: 14px;
     height: 14px;
@@ -55,32 +58,21 @@
     background: transparent url('../assests/search.png')  0% 0% no-repeat padding-box;
     opacity: 1;
   }
-
 .history-table{
     position: absolute;
     top: 207px;
-    left: 99px;
+    left: 86px;
     width: 90vw;
     /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     /* border: 1px solid #EAEDF0; */
-    
     opacity: 1;
 }
-.history-table table{
-    width: 100%;
-    margin-left: 0;
-    border: 1px solid black;
-}
-
-
-
 .history-table .table-content{
     width: 100%;
     margin-left: 0;
     border: 1px solid black;
 }
-
 .table-att {
     display: flex;
     align-items: center;
@@ -88,51 +80,49 @@
     height: 30px;
     color: #FFFFFF;
 }
-
-thead{
-    background-color: #1E2022;
-}
-thead tr th{
-    margin: 0 0 0 0;
+.table-att th{
+    text-align: left;
+    margin-left: 10px;
     height: 17px;
-    width: 126px;
-    color: white;
+    width: 8.6vw;
     font: normal normal 12px Open Sans;
 }
-tr td{
-    text-align: center;
-    font-size: 12px;
+td{
+    margin-left: 10px;
+    width: 8.6vw;
+    text-align: left;
+    font-size: 14px;
+    height: 50px;
 }
-table tr {
-    height: 30px;
-}
-td p{
+ td p{
     text-decoration: none;
     color: red;
 }
-
+td{
+    display: flex;
+    align-items: center;
+}
 .even{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #EAEDF0;
     opacity: 1;
+    /* #EAEDF0; */
 }
 .odd{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #EAEDF0 0% 0% no-repeat padding-box;
-    border: 1px solid #EAEDF0;
+    /* #EAEDF0; */
 }
-.no-order{
-    position: absolute;
-    top: 300px;
-    left: 600px;
+.odd td{
+    align-self: center;
+}
+.even td{
     text-align: center;
 }
-
-.no-order p{
-    letter-spacing: 0px;
-    color: #222B45;
-    opacity: 0.5;
-}
-
 .cancel-order p{
     font-size: 11px;
     letter-spacing: 0px;
@@ -140,4 +130,39 @@ td p{
 .cancel-red{
     color: red
 }
-/* .order-count */
+/*CSS when no order present*/
+.no-order{
+    position: absolute;
+    top: 45vh;
+    left: 45vw;
+    width: 200px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0px;
+    padding:0
+}
+.no-order p{
+    color: #222B45;
+    opacity: 0.5;
+}
+.no-order div{
+    margin: 0%;
+    padding:0;
+    /* border: 1px solid black; */
+}
+.no-order div a{
+margin-top: 20px;
+padding: 0;
+}
+.create-btn2{
+    width: 107px;
+    border: 1px solid #5861AE;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font: normal normal 600 14px/48px Open Sans;
+    color: #5861AE;
+    margin: 0;
+}

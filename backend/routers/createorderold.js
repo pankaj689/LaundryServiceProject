@@ -1,9 +1,8 @@
 const express = require("express")
 const router = express.Router();
 const Createorder = require("../model/orderhistry")
-// const summary = require('../model/summery');
+const summary = require('../model/summery');
 var bodyParser = require('body-parser')
-router.use(bodyParser.urlencoded({extended:true}))
 router.use(bodyParser.json())
 
 router.get("/Createorder", async (req, res) => {
@@ -21,15 +20,9 @@ router.get("/Createorder", async (req, res) => {
         })
     }
 })
-
 router.get("/summary/:orderId", async (req, res) => {
-
-    // console.log("orderId", req.params);
-    const odi = req.params.orderId
-    const summaryData =  await Createorder.findOne({_id: odi}); //user refernce needed for particular order
-
-  
-
+    // console.log("orderID",req.params.orderId)
+    const summaryData =  await summary.find({user:req.params.orderId}); //user refernce needed for particular order
     if (summaryData){
         res.status(200).json({
             "status": "success",
@@ -43,6 +36,7 @@ router.get("/summary/:orderId", async (req, res) => {
     }
 })
 
+
 router.post("/Createorder", async (req, res) => {
        console.log("req.body", req.body)
     try {
@@ -52,24 +46,33 @@ router.post("/Createorder", async (req, res) => {
             orderId:req.body.orderId,
             orderDate:req.body.orderDate,
             storeLocation:req.body.storeLocation,
-            storeaddress:req.body.storeaddress,
             city:req.body.city,
             storePhone :req.body.storePhone,
             totalItem:req.body.totalItem,
-            subTotal: req.body.subTotal,
             price :req.body.price,
-            pickupcharges :req.body.pickupcharges,
             status:req.body.status,
-            address: req.body.address,
             user:req.user
         })
 
-
+        // console.log("order",order)
+        const summeryData = await summary.create({
+            prodType: req.body.prodType,
+            storeLocation:req.body.storeLocation,
+            storeaddress:req.body.storeaddress,
+            storePhone :req.body.storePhone,
+            quantity: req.body.quantity,
+            subTotal: req.body.subTotal,
+            price: req.body.total,
+            pickupcharges :req.body.pickupcharges,
+            address: req.body.address,
+            user:req.body.orderId
+            
+        })
         // console.log("summeryData",summeryData)
         res.json({
             status: "success",
             order,
-            massege : "orderPlace"
+            summeryData
         })
     } catch (e) {
         res.status(400).json({
@@ -80,4 +83,3 @@ router.post("/Createorder", async (req, res) => {
 })
 
 module.exports = router;
-

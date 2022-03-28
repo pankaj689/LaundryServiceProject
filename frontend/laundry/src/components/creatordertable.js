@@ -199,9 +199,6 @@ function Loop(props) {
     console.log(" item value to reset",value)
     // setprodarry([]);
     settotalprice(totalprice * 0);
-    // blarr = []
-    // setuser({ name: "", quantity: 0, wash: "", press: "", fold: "", pack: "", price: "" });
-    // pruct:{"product":[]}
     setuser({ quantity: 0, price: "" })
     setStylewash("washing");
     setStyleiron("ironong");
@@ -222,61 +219,11 @@ function Loop(props) {
     setProduct([])
 
 
-
-
-
-    // setuser({ name: "", quantity: 0, blarr, price: "" });
   }
 
   return (
-    // <>
-    //   <div className='maindiv'>
-    //     <div className='itemtable'>
-    //       <div className='tablehead'>
-    //         <div className='prodtype'>Produt Types</div>
-    //         <div className='quntity'>Quantity</div>
-    //         <div className='washtype'>Wash Type</div>
-    //         <div className='price'>Price</div>
-    //       </div>
+    
 
-    //     </div>
-
-    //     {dt.map((Item, index) => {
-    //       // return <Eachprodlist {...item} />;
-    //       return (
-    //         <div className='tablerow' key={index}>
-    //           <div className='prodinfo'>
-    //             <div>
-    //               <img className='prodimage' alt="prodimage" src={Item.prodImg} />
-    //             </div>
-    //             <div className='namedex'>
-    //               <h1 className={prodname} onClick={productname1} type="Number" name="prodType"   >{Item.prodType}</h1>
-    //               <p className='des' >{Item.prodDesc}</p>
-    //             </div>
-    //           </div>
-    //           <div className='inputdiv' ><input className='intinput' value={user.quantity} onChange={productname2} type="number" name="quantity" ></input></div>
-    //           <div className='opretionimg' >
-    //             <div className={stylewash} onClick={changeStylewash} type="washing" name="wash"></div>
-    //             <div className={styleiron} onClick={changeStyleiron} type="ironong" name="press" ></div>
-    //             <div className={styletowel} onClick={changeStyletowel} type="fold" name="fold"></div>
-    //             <div className={stylebleach} onClick={changeStylebleach} type="pack" name="pack"></div>
-    //           </div>
-    //           <div className='res'> <p className='initialprice' value="0" onClick={pricefun} type="Number" name="price"  >{dipprice}</p>
-    //             <button className={resbtn} onClick={resFun} >Reset</button>
-    //           </div>
-    //         </div>)
-
-
-    //     })}
-    //   </div>
-
-    //   <div className='orderbtn'>
-    //     <div className='cle'><Cancel /></div>
-    //     <div className='cle' onClick={console.log({ product })}><Process /></div>
-    //   </div>
-
-
-    //   </>
     <div className="product-Container">
       <table className='maindiv' >
         <thead className='tablehead' >
@@ -321,11 +268,15 @@ function Loop(props) {
         <div className='cle'><Cancel /></div>
         <div className='cle' onClick={console.log("processbtn",sendOrder)}><Process /></div>
 
+
   
 
  
 
-    </div></>
+    </div>
+    </>
+
+
   )
 }
 

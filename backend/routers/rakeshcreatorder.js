@@ -3,6 +3,7 @@ const router = express.Router();
 const Createorder = require("../model/orderhistry")
 // const summary = require('../model/summery');
 var bodyParser = require('body-parser')
+// router.use(bodyParser.json({ type: 'application/*+json' }))
 router.use(bodyParser.urlencoded({extended:true}))
 router.use(bodyParser.json())
 
@@ -21,15 +22,11 @@ router.get("/Createorder", async (req, res) => {
         })
     }
 })
-
 router.get("/summary/:orderId", async (req, res) => {
-
-    // console.log("orderId", req.params);
+    console.log("orderId", req.params);
     const odi = req.params.orderId
-    const summaryData =  await Createorder.findOne({_id: odi}); //user refernce needed for particular order
-
-  
-
+    const summaryData =  await Createorder.findOne({orderId: odi}); //user refernce needed for particular order
+    console.log(summaryData);
     if (summaryData){
         res.status(200).json({
             "status": "success",
@@ -38,7 +35,7 @@ router.get("/summary/:orderId", async (req, res) => {
     }else{
         res.status({
             "status": "failed",
-            "message" : e.message
+            "message" : ""
         })
     }
 })
@@ -63,13 +60,10 @@ router.post("/Createorder", async (req, res) => {
             address: req.body.address,
             user:req.user
         })
-
-
-        // console.log("summeryData",summeryData)
         res.json({
             status: "success",
             order,
-            massege : "orderPlace"
+            message: "order placed"
         })
     } catch (e) {
         res.status(400).json({
@@ -78,6 +72,4 @@ router.post("/Createorder", async (req, res) => {
         })
     }
 })
-
 module.exports = router;
-

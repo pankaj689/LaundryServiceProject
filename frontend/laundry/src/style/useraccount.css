@@ -1,12 +1,22 @@
+.useracc{
+    height: 120vh;
+    width:100vw;
+    /* border: 1px solid violet; */
+}
+
 .midSection{
     display: flex;
     flex-flow: row;
+    width: 100%;
+    height: 90%;
+/* border: 1px solid green; */
 }
 /* .initialOrder0{
     position: relative;
     top:50 px;
     left:49px;
 } */
+
 
 .sidediv{
     width: 100%;
@@ -53,4 +63,43 @@
 .btnCreat{
     margin-top: 10px;
     margin-left:630px ;
+}
+
+.NoOrders{
+    color: black;
+    margin-top: 300px;
+    margin-left:40% ;
+  
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 300px;
+}
+.NoOrders2{
+    display: none;
+    color: black;
+    margin-top: 300px;
+    margin-left:600px ;
+}
+
+.Noorderpara{
+  
+    width: 200px;
+    padding-bottom: 0;
+   
+}
+.creatbtn{
+    
+    width: 200px;
+    padding-top: 0;
+    padding-left: 40px;
+}
+
+.displyordertab{
+  display: none;
+}
+
+.displyordertab2{
+    display:block;
+    /* border: 1px solid blue; */
 }

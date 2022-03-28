@@ -58,8 +58,9 @@
 .signinButton {
   border: 2px solid #4552c1;
   border-radius: 5%;
-  width: 100px;
+  width: 150px;
   padding: 6% 12%;
+  
 }
 .signinButton a {
   text-align: center;
@@ -71,7 +72,9 @@
 }
 .signinButton:hover{
   background-color: #4552c1;
-  color: #ffffff
+  color: #ffffff;
+  
+ 
 
 }
 /* Form Styling */

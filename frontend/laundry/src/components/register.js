@@ -180,7 +180,6 @@ console.log("user",user)
                 <div className="submitFormButton">
                   <input type="submit" value="Register" onClick={PostData} />
                 </div>
-
             </form>
           </div>
         </div>
