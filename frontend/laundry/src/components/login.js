@@ -40,11 +40,14 @@ export default function Login() {
         }
       ).then(res => localStorage.setItem('token', res.data.token))
 
+
       // console.log("e.response.status",e.response.status)
       window.alert("logged in sucessfully")
       navigate("/createorder")
     } catch (e) {
       if (e.response.status === 404) {
+
+
         window.alert("user doesn't exist")
         navigate("/")
       } else {

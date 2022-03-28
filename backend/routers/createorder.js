@@ -23,9 +23,13 @@ router.get("/Createorder", async (req, res) => {
 })
 
 router.get("/summary/:orderId", async (req, res) => {
+
     // console.log("orderId", req.params);
     const odi = req.params.orderId
     const summaryData =  await Createorder.findOne({_id: odi}); //user refernce needed for particular order
+
+  
+
     if (summaryData){
         res.status(200).json({
             "status": "success",
@@ -44,16 +48,6 @@ router.post("/Createorder", async (req, res) => {
     try {
         // console.log("req.body", req.body)
         const order = await Createorder.create({
-            // prodType: req.body.prodType,
-            // orderId:req.body.orderId,
-            // orderDate:req.body.orderDate,
-            // storeLocation:req.body.storeLocation,
-            // city:req.body.city,
-            // storePhone :req.body.storePhone,
-            // totalItem:req.body.totalItem,
-            // price :req.body.price,
-            // status:req.body.status,
-            // user:req.user
             prodType: req.body.prodType,
             orderId:req.body.orderId,
             orderDate:req.body.orderDate,
@@ -70,34 +64,7 @@ router.post("/Createorder", async (req, res) => {
             user:req.user
         })
 
-        // // console.log("order",order)
-        // const summeryData = await summary.create({
-        //     // prodType: req.body.prodType,
-        //     // storeLocation:req.body.storeLocation,
-        //     // storeaddress:req.body.storeaddress,
-        //     // storePhone :req.body.storePhone,
-        //     // quantity: req.body.quantity,
-        //     // subTotal: req.body.subTotal,
-        //     // price: req.body.total,
-        //     // pickupcharges :req.body.pickupcharges,
-        //     // address: req.body.address,
-        //     // user:req.body.orderId
-        //     prodType: req.body.prodType,
-        //     orderId:req.body.orderId,
-        //     orderDate:req.body.orderDate,
-        //     storeLocation:req.body.storeLocation,
-        //     storeaddress:req.body.storeaddress,
-        //     city:req.body.city,
-        //     storePhone :req.body.storePhone,
-        //     totalItem:req.body.totalItem,
-        //     subTotal: req.body.subTotal,
-        //     price :req.body.price,
-        //     pickupcharges :req.body.pickupcharges,
-        //     status:req.body.status,
-        //     address: req.body.address,
-        //     user:req.user
-            
-        // })
+
         // console.log("summeryData",summeryData)
         res.json({
             status: "success",

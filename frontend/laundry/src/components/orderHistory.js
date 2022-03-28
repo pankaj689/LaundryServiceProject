@@ -1,15 +1,21 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+
 import Sidebar from "./sidebarOrederhis";
+
+// import Sidebar from "./sidebar";
+
 import UserHeader from './userHeader'
 import '../styles/orderHistory.css';
 import search from '../assests/search.svg'
 // import NoOrder from "./NoOrder";
 import Footer from "./footer";
 import CancelOrder from './cancelOrder';
+
 import OrderSummary from './odersumpop';
 import { FaRegEye } from 'react-icons/fa';
 import UserAccountPage from './useraccount';
+
 
 
 const OrderHistory = () => {
@@ -17,8 +23,10 @@ const OrderHistory = () => {
     const [cls, setCls] = useState("")
     const [pop, setPop] = useState(false)
     const [orderI, setOrderI] = useState("")
+
     const [viewId, setviewId] = useState("")
     const [CancelOrderBtn, setCancelOrderBtn] = useState("")
+
     const token = localStorage.getItem('token');
     const [sumstate, setsumState] = useState(false)
     const [details, setDetails] = useState({})
@@ -33,6 +41,7 @@ const OrderHistory = () => {
     }
     ,[])
 
+
     const getOrdDetail = async (_idx) => {
         setviewId(_idx);
         try{
@@ -44,34 +53,37 @@ const OrderHistory = () => {
         }
     }
 
+
     const handleStatusUpdate = (idx) => {
         setOrderI(idx)
         setPop(true)
         setCls('order-container')
       }
-      
+
 
     let orderCount = 0
     let xx = 'even'
     orderCount = order.length > 0 ? order.length: orderCount;
     // console.log(order)
-    
+
     let count = 0
     if (orderCount === 0){
         return (
         <div>
-        {/* <UserHeader/>
-        <Sidebar />
-        <NoOrder />
-        <Footer /> */}
+
+       
         <UserAccountPage/>
         </div>);
     }else{
     return (
         <div className={cls}>
+
             <OrderSummary details = {details} smstate= {sumstate} setsmState = {setsumState}/>
             <UserHeader/>
             <Sidebar/>
+
+
+
             <div className ="table-head">
                 <p className ="order-count">Orders | {orderCount}</p>
                 <a href ="/createorder"> <button className="create-btn">Create</button></a>
@@ -79,6 +91,7 @@ const OrderHistory = () => {
                 <input  type="search" id ="search-bar" />
             </div>
             <div className= 'history-table'>
+
                 <table>
                     <thead>
                         <tr>
@@ -92,6 +105,7 @@ const OrderHistory = () => {
                         <th>Status</th>
                         <th></th>
                         <th>View</th>
+
                         </tr>
                     </thead>
 
@@ -123,8 +137,10 @@ const OrderHistory = () => {
                     </tbody>
                 </table>
             </div>
+
             <CancelOrder  orderState = {pop} popTrigger ={setPop} orderI ={orderI} StetusChannge={setCancelOrderBtn} ></CancelOrder>
             <Footer />
+
         </div>
 
     )}

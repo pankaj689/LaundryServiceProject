@@ -8,6 +8,7 @@ const CancelOrder = (props) =>{
     const handleCancelConfirm = (e) =>{
         e.preventDefault();
         try{
+
         axios.post(`http://localhost:5000/api/update/${orderId}`);
         // navigate("/history")
         navigate("/createorder")
@@ -15,12 +16,18 @@ const CancelOrder = (props) =>{
         // props.popTrigger(false);
         // props.StetusChannge("cls")
         props.StetusChannge("")
+
+        axios.post("http://localhost:5000/api/update", {orderId: orderId});
+        navigate("/createOrder")
+        console.log("you clicked me");
+
         }catch(e){
           console.log(e.messsage);
         }
     }
     // props.popTrigger(false)
     return (props.orderState)?
+
      (<div className='mainpopcancelord'  >      
        <div className="popup-box">
         <div className="box">
@@ -28,6 +35,9 @@ const CancelOrder = (props) =>{
             <p className='alertTxt' >Alert</p>
             <b><span onClick={() => props.popTrigger(false)} className="close-icon" >X</span></b>
             </div>
+
+    
+
             <div className="alert-desc">
             <span className="danger-symbol">&#9888;</span>
               <p>Are you sure you want to cancel the
@@ -36,7 +46,9 @@ const CancelOrder = (props) =>{
             </div>
             <button onClick ={handleCancelConfirm} className="proceed-btn">Proceed</button>
         </div>
+
       </div>
       </div>): "";
+
 }
 export default CancelOrder;

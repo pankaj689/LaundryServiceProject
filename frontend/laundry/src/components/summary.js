@@ -184,8 +184,10 @@ const Summary = (props) => {
           </div>
         </div>
       </div>
+
       </div>
     </>):"";
+
 };
 
 export default Summary;
