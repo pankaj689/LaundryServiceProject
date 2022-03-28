@@ -6,6 +6,8 @@ const cors = require('cors');
 const routeLogin = require("./routers/login.js");
 const prodRouter=require("./routers/prodlist")
 const Createorder =  require("./routers/createorder")
+const updateRouter = require('./routers/update');
+
 var jwt = require('jsonwebtoken');
 const SECRET = "LaundryService";
 const url =
@@ -17,7 +19,7 @@ mongoose.connect(url, function (err, db) {
 });
 
 const whitelist =[
-  "http://localhost:5000"
+  "http://localhost:3000"
 ]
 
 app.use(cors({
@@ -59,8 +61,9 @@ next();
 
 // app.use("/api", orderRouter);
 app.use("/api", routeLogin);
-app.use("/api",prodRouter)
-app.use("/api",Createorder)
+app.use("/api",prodRouter);
+app.use("/api",Createorder);
+app.use("/api", updateRouter);
 
 app.listen(5000, () => {
   console.log("listening to port 5000");

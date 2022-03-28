@@ -1,14 +1,21 @@
-.Footer {
+.foot{
   margin: 0;
+  width: 100%;
+  height: 7%;
   background-color: #182838;
-  text-align: center;
   font: normal normal normal 12px/24px Avenir;
   letter-spacing: 0.12px;
-  color: #ffffff;
+  color: white;
   opacity: 1;
+  
+
+
 }
-p {
+.fpara{
+  margin-top: 0;
   padding: 1em 0;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: white;
+  margin-left: 40%;
+
 }

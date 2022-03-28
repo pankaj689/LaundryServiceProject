@@ -74,3 +74,23 @@ input[type="password"] {
   background-color: #4552c1;
   color: white;
 }
+.signinButton{
+  margin-top: 2em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  border: none;
+  height: 4em;
+  width: 8vw;
+  align-self: center;
+  background-color: #4552c1;
+  color: white;
+  margin-top: 10px;
+}
+.asideLeft{
+  display: flex;
+  flex-flow: column;
+}
+.asideLeftFooter{
+  margin-bottom: 0;
+  height: 70px;
+}

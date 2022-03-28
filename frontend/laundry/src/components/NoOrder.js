@@ -1,17 +1,16 @@
 import React from 'react';
-import {Create} from "./button"
+import { Create } from './button';
 import "../style/useraccount.css"
-const NoOrder  = function noorder () {
+const Pricing  = function noorder () {
     return (
         <div className='no-order'>
-                <p>No orders available</p>
-                <div>
-                    <a href ="/createorder"><Create /></a>
-                </div>
-            </div>
- 
+        <p>No orders available</p>
+        <div>
+            <a href ="/createorder"><Create /></a>
+        </div>
+    </div>
     )
 }
 
 
-export default NoOrder;
+export default Pricing;

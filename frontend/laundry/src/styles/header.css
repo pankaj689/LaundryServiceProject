@@ -12,6 +12,7 @@ header {
   margin-left: 0px;
   box-shadow: 0px 2px 48px #0000000f;
   padding: 0px;
+  height: 8%;
 }
 header h4 {
   padding-left: 4%;
@@ -45,6 +46,9 @@ li {
 ul a{
   text-decoration: none;
 }
+.logoutButn:hover {
+  background-color: #99A0E2;
+}
 .signin-btn{
   color: #FFFFFF;
   background-color: #5861ae;
@@ -59,7 +63,6 @@ nav .userAcc{
  
 }
 .userAcc{
-  
   width: 214px;
   height: 80px;
   color: white;
@@ -85,7 +88,7 @@ nav .userAcc{
   
 }
 .userName{
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 30px;
   width: 96px;
   height: 22px;

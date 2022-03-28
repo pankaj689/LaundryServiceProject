@@ -6,20 +6,16 @@ const orderSchema = new Schema({
     orderDate:{type : String, required:true},
     storeLocation:{type : String,required: true },
     storeaddress:{type: String, required: true},
-    city:{type  :String ,default:"banglore"},
+    city:{type  :String ,required: true},
     storePhone :{type  :String ,required: true},
     totalItem:{type  :Number ,required: true},
     subTotal: {type: Number, required: true},
-    price :{type  : Number ,required: true},
     pickupcharges :{type: Number, default: 90},
     address: {type: String},
+    price :{type  : Number ,required: true},
     status:{type : String , default:"Ready to Pick"},
     user:{type:Schema.Types.ObjectId, ref:"userdetails"} ,
-    // refsymmery:{type:Schema.Types.ObjectId, ref:"orderHistory"},   
+    // refsymmery:{type:Schema.Types.ObjectId, ref:"orderHistory"},
 }, {strict: false },{timestamps:true});
-
 const orderHistory = mongoose.model('orderHistory', orderSchema);
-
 module.exports = orderHistory
-
-

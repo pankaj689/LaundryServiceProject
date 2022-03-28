@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../style/createordertable.css';
 import "../style/stylebtn.css"
-// import Eachprodlist from "./Eachprodlist"
+
+import Eachprodlist from "./Eachprodlist"
 import { Cancel, Process } from "./button"
-import Summary from  "./summary"
-
-
-
 const sendOrder = {}
 
 function Loop(props) {
   const token = localStorage.getItem('token');
   console.log(token);
+  
   const [dt, setdt] = useState([])
 
   useEffect(() => {
@@ -24,6 +22,7 @@ function Loop(props) {
       })
   }, [])
   console.log("dt", dt)
+
 
   const [user, setuser] = useState({ quantity: 0, price: "" });
   // const [prodarry, setprodarry] = useState([]);
@@ -321,13 +320,13 @@ function Loop(props) {
       <div className='orderbtn'>
         <div className='cle'><Cancel /></div>
         <div className='cle' onClick={console.log("processbtn",sendOrder)}><Process /></div>
-      </div>
-          
 
+  
 
+ 
 
     </div>
-
+    </>
   )
 }
 

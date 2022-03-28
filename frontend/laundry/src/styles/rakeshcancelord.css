@@ -1,62 +1,74 @@
-
-
 .popup-box{
     position: absolute;
     z-index: 2;
-    top: 25vh;
+    top: 40%;
+    left: 400px;
     opacity: 1;
     text-align: center;
     height: 250px;
-
     width: 415px;
-    left: 400px;
     border-radius: 2px 2px 1px 1px;
     background-color: white;
     border: 1px solid black;
 }
-.alert-close{
+ .cancel-alert{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+/* align-items: center;
     font-style: Open Sans, Semibold;
+    border: 4px solid black;
+    */
+.cancel-alert p{
+    padding-top: 10px;
+    text-align: left;
+    /* border: 1px solid black; */
     font-size: 14px;
     line-height: 19px;
     color:#FFFFFF;
-    margin: 0, 0, 0, 0;
-    padding: 10px;
-    height: 43px;
-    background: #5861AE 0% 0% no-repeat padding-box;
+    height: 70%;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.cancel-alert .close-icon{
+    margin-right: 10px;
+    color: white;
 }
 .alert-desc{
+    display: flex;
     text-align: center;
-    font-size: 14px;
     margin-left: 98.5px;
-    text-align: center;
     width: 218px;
     height: 38px;
     margin-top: 35px;
 }
-
 .alert-desc p{
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 400;
     position: relative;
     margin-bottom: 55px;
     color: black;
 }
-
 .alert-desc p b{
     color: #5861AE;
 }
 .danger-symbol{
-    margin-top: 23px;
-    color: white;
+    position: relative;
+    z-index: 2;
+    margin-top: 18px;
+    color: #FFFFFF;
     background-color: red;
 }
-    
-.proceed-btn{
+.pcd-btn{
     color: #FFFFFF;
     width: 107px;
     height: 32px;
+    font-weight: 400;
     background: #5861AE 0% 0% no-repeat padding-box;
     border: 1px solid #5861AE;
     border-radius: 4px;

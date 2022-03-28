@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate} from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import axios from 'axios'
 import '../style/createordertable.css';
 import "../style/stylebtn.css"
-import Summary from  "./summary"
+// import Summary from  "./summary"
 // import Eachprodlist from "./Eachprodlist"
 import { Cancel, Process } from "./button"
 const sendOrder = {}
@@ -14,7 +14,6 @@ function Loop(props) {
     const token = localStorage.getItem('token');
     console.log(token);
     const [dt, setdt] = useState([])
-    const [summeryPop,setsummeryPop] = useState(false)
 
     useEffect(() => {
         axios.get("http://localhost:5000/api/prodlist")
@@ -55,10 +54,11 @@ function Loop(props) {
     const [shirstylebleach, setshirStylebleach] = useState("bleach");
     const [shirtdipprice, setshirtdipprice] = useState("--");
     const [shirresbtn, setshirresbtn] = useState("Resetbtn")
-    let name, value,value2;
+    let name, value;
     const productname1shirt = (e) => {
         var name = e.target.getAttribute('name')
         var value = e.target.getAttribute('value')
+        var id = e.target.getAttribute('id')
         // e.target.className= "prodname2"
         setshirtprodname("prodname2")
         setshirtprodtype(value)
@@ -68,7 +68,6 @@ function Loop(props) {
         value = e.target.value;
         setusersh({ ...usersh, [name]: value });
         setshirtquantity(value)
-        
     }
     const changeStylewashshirt = (e) => {
         name = e.target.name;
@@ -852,11 +851,11 @@ function Loop(props) {
 
         <div className="product-Container">
             <table className='maindiv' >
-                <thead className='tablehead2' >
+                <thead className='tablehead' >
                     <th className='prodtype' >Product Types</th>
                     <th className='quntity' >Qunatity</th>
                     <th className='washtype' >Wash</th>
-                    <th className='tableheadprice' >Price</th>
+                    <th className='price' >Price</th>
                 </thead>
                 <tbody>
                     <tr className='tablerow'  >
@@ -866,11 +865,10 @@ function Loop(props) {
                             </div>
                             <div className='namedex'>
                                 <h1 className={shirtprodname} value="Shirts" onClick={productname1shirt} type="Number" name="prodType">Shirts</h1>
-                                 {/* <h1 className='prodname123' >Shirts</h1> */}
                                 <p className='des' >Lorem Ipsum is simply dummy text of the</p>
                             </div>
                         </td>
-                        <td className='inputdiv' > <input className='intinput' value={usersh.quantity}  onChange={productname2shirt} type="number" name="quantity" ></input></td>
+                        <td className='inputdiv' > <input className='intinput' value={usersh.quantity} onChange={productname2shirt} type="number" name="quantity" ></input></td>
                         <td className='opretionimg' >
                             <div className={shirstylewash} id={`Shirtswash`} onClick={changeStylewashshirt} type="washing" name="wash"></div>
                             <div className={shirstyleiron} id={`Shirtspress`} onClick={changeStyleironshirt} type="ironong" name="press" ></div>
@@ -1015,11 +1013,9 @@ function Loop(props) {
             </table>
             <div className='orderbtn'>
                 <div className='cle' onClick={cancelOrder} ><Cancel /></div>
-                {/* <Link to="/summary" state={sendOrder}> <div className='cle' ><Process /></div> </Link> */}
-                <div className='cle' onClick={()=>setsummeryPop(true)} ><Process /></div>
-            <Summary trigger={summeryPop} sendtrigger={setsummeryPop} sendData={sendOrder}  ></Summary>
+                <Link to="/summary" state={sendOrder}> <div className='cle' ><Process /></div> </Link>
             </div>
-            
+
             
         </div>
 

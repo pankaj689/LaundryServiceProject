@@ -1,3 +1,11 @@
+.mainpop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    background-color:rgba(0 , 0, 0, 0.2) ;
+}
 .successContainer{
     margin-top: 10vh;
     margin-left: 38%;
@@ -71,3 +79,6 @@ button{
     opacity: 1;
     border: none;
 }
+/* .order-container{
+    tra
+} */

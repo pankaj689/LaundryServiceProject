@@ -10,43 +10,57 @@ flex-flow: column;
     height: 100%;
     width: 100%;
 }
-.tablehead{
+.tablehead2{
     height: 40px;
-    width: 99.4%;
+    width: 98.5%;
     color:white;
+    /* color: black; */
     background-color: black;
+    /* background-color: white; */
     display: flex;
     flex-flow: row;
     padding: 10px;
     padding-top: 10px;
+    /* border: 1px solid green; */
+
 }
 .tablerow{
     height:70px;
-    width: 100%;
+    width: 99.2%;
     border: 1px solid gray;
     display: flex;
    flex-flow: row;
    padding: 5px;
+   margin-left: 0;
    
 }
 
 .prodtype{
     width: 350px;
     margin-top: 10px;
+    /* border: 1px solid red; */
+    text-align: left;
  
 }
 .quntity{
     width: 100px;
     margin-top: 10px;
+    text-align: left;
+ 
 }
 .washtype{
     width: 400px;
     margin-left: 50px;
     margin-top: 10px;
+    text-align: left;
+ 
 }
-.price{
+.tableheadprice{
     width: 200px;
     margin-top: 10px;
+    text-align: left;
+ 
+   
 }
 .washing{
     width: 50px;
@@ -128,38 +142,55 @@ table {
 }
 .prodimage{
     width: 50px;
-height: 50px;
-margin-top: 10px;
+    height: 50px;
+    margin-top: 10px;
 }
+
 .prodname{
     width: 60px;
-height: 20px;
+    height: 0;
 /* UI Properties */
-text-align: left;
-font: normal normal 600 14px/48px Open Sans;
-letter-spacing: 0px;
-color: #1D2022;
-opacity: 1;
+    text-align: left;
+    font: normal normal 600 14px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #1D2022;
+    opacity: 1;
+    /* border: 1px solid red; */
 }
+.prodname123{
+    width: 60px;
+    height: 0;
+/* UI Properties */
+    text-align: left;
+    font: normal normal 600 14px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #1D2022;
+    opacity: 1;
+    /* border: 1px solid red; */
+    margin-top: 0;
+}
+
+
 .prodname2{
     width: 60px;
-height: 20px;
-/* UI Properties */
-text-align: left;
-font: normal normal 600 14px/48px Open Sans;
-letter-spacing: 0px;
-color: #5861AE;
-opacity: 1;
+    height: 0;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal 600 14px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #5861AE;
+    opacity: 1;
 }
 .des{
     width: 250px;
-height: 25px;
-/* UI Properties */
-text-align: left;
-font: normal normal normal 10px/48px Open Sans;
-letter-spacing: 0px;
-color: #76788B;
-opacity: 1;
+    height: 0;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 10px/48px Open Sans;
+    letter-spacing: 0px;
+    color: #76788B;
+    opacity: 1;
+    /* border: 1px solid blue; */
 }
 .opretionimg{
     display: flex;
@@ -168,13 +199,9 @@ opacity: 1;
     height: 50px;
     width: 400px;
     margin-left: 50px;
-    /* border: 2px solid orangered; */
-   
-    
+    /* border: 2px solid orangered; */ 
 }
-.namedex{
-    margin: 3px;
-}
+
 .initialprice{
     width: 150px;
 height: 20px;
@@ -190,13 +217,13 @@ margin-left: 10px;
 }
 .intinput{
     height: 30px;
-    width: 50px;
-   
+    width: 50px; 
 }
 .orderbtn{
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+    margin-right: 5%;
 }
 .cle{
     margin: 10px;
